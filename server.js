@@ -31,7 +31,10 @@ app.use(methodOverride());
 
 // Routes
 // require app routes.js
+// require('./app/routes.js')(app);
 
 // Listen
 // app listen(port)
 // console.log listening message
+app.listen(port);
+console.log('Listening on port ' + port);
