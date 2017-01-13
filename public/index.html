@@ -60,10 +60,10 @@
         <!-- Panel Body -->
         <div class="panel-body">
 
-          <!-- Creates Form (novalidate disables HTML validation, Angular will control) -->
+          <!-- Creates Form (novalidate disables HTML validation for Angular control) -->
           <form name ="addForm" novalidate>
 
-            <!-- Text Boxes and Other User Inputs. Note ng-model binds the values to Angular $scope -->
+            <!-- Text Boxes and Other User Inputs - ng-model binds the values to Angular $scope -->
             <div class="form-group">
               <label for="username">Username <span class="badge">All fields required</span></label>
               <input type="text" class="form-control" id="username" placeholder="grandPoobah" ng-model="formData.username" required>
@@ -113,7 +113,7 @@
               <input type="text" class="form-control" id="verified" placeholder= "I don't think so...?" ng-model="formData.htmlverified" readonly>
             </div>
 
-            <!-- Submit button. Note that its tied to createUser() function from addCtrl. Also note ng-disabled logic which prevents early submits.  -->
+            <!-- Submit button - tied to createUser() function from addCtrl - ng-disabled logic prevents early submits  -->
             <button type="submit" class="btn btn-danger btn-block" ng-disabled="addForm.$invalid">Submit</button>
             
             </form>
