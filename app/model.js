@@ -28,4 +28,4 @@ UserSchema.pre('save', function(next){
 UserSchema.index({location: '2dsphere'});
 
 // Export UserSchema set MongoDB collection as map-users
-module.exports = mongoose.model('scotch-user', UserSchema);
+module.exports = mongoose.model('meanmap-user', UserSchema);
