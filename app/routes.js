@@ -21,23 +21,23 @@ var mongoose = require('mongoose');
 var User = require('./model.js');
 
 module.exports = function(app){
-  app.get('/users', function(req, res){
+  app.get('/users', function(request, response){
     var query = User.find({});
     query.exec(function(err, users){
       if(err){
-        res.send(err);
+        response.send(err);
       } else {
-        res.json(users);
+        response.json(users);
       }
     });
   });
-  app.post('/users', function(req, res){
-    var newuser = new User(req.body);
+  app.post('/users', function(request, response){
+    var newuser = new User(request.body);
     newuser.save(function(err){
       if(err){
-        res.send(err);
+        response.send(err);
       } else {
-        res.json(req.body);
+        response.json(request.body);
       }
     });
   });
