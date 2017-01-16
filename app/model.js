@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 // Create user schema
-var UserSchema = newSchema({
+var UserSchema = new Schema({
   username: {type: String, required: true},
   locationType: {type: String, required: true},
   appreciationTime: {type: Number, required: true},
