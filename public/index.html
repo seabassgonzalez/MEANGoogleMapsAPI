@@ -118,7 +118,7 @@
             </div>
 
             <!-- Submit button - tied to createUser() function from    - ng-disabled logic prevents early submits  -->
-            <button type="submit" class="btn btn-danger btn-block" ng-disabled="addForm.$invalid">Submit</button>
+            <button type="submit" class="btn btn-danger btn-block" ng-click="createUser()" ng-disabled="addForm.$invalid">Submit</button>
             
             </form>
         </div>
