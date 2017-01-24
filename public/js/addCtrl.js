@@ -2,7 +2,7 @@
 // Instantiate addCtrl.controller takes 'addCtrl' '$scope' '$http' and 'geolocation'
   
   // Initialize variables formData, coords, lat, and long 
-  
+    
   // Set initial coordinates $scope.formData.latitude
   // Set initial coordinates $scope.formData.longitude
 

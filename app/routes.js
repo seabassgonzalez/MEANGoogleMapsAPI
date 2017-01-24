@@ -19,6 +19,8 @@
 
 var mongoose = require('mongoose');
 var User = require('./model.js');
+mongoose.Promise = require('bluebird');
+
 
 module.exports = function(app){
   app.get('/users', function(request, response){
