@@ -41,11 +41,11 @@ addCtrl.controller('addCtrl', function($scope, $http, geolocation){
 
     var userData = {
       username: $scope.formData.username,
-      locationType: $scope.formData.locationType;
-      appreciationTime: $scope.formData.appreciationTime;
-      favfeature: $scope.formData.favfeature;
+      locationType: $scope.formData.locationType,
+      appreciationTime: $scope.formData.appreciationTime,
+      favfeature: $scope.formData.favfeature,
       location: [$scope.formData.longitude, $scope.formData.latitude],
-      htmlverified: $scope.formData.htmlverified;
+      htmlverified: $scope.formData.htmlverified
     };
 
     $http.post('/users', userData)
