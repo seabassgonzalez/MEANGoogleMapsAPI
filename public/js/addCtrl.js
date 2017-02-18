@@ -26,8 +26,8 @@
       // report error
         // console.logged
 
-var addCtrl = angular.module('addCtrl', ['geolocation']);
-addCtrl.controller('addCtrl', function($scope, $http, geolocation){
+var addCtrl = angular.module('addCtrl', ['geolocation', 'gservice']);
+addCtrl.controller('addCtrl', function($scope, $http, geolocation, gservice){
 
   $scope.formData = {};
   var coords = {};
@@ -49,11 +49,14 @@ addCtrl.controller('addCtrl', function($scope, $http, geolocation){
     };
 
     $http.post('/users', userData)
-      .success(function(data){
+      .save(function(data){
         $scope.formData.username = "";
         $scope.formData.locationType = "";
         $scope.formData.appreciationTime = "";
         $scope.formData.favfeature= "";
+
+        // Refresh the map with new data
+        gservice.refresh($scope.formData.latitude, $scope.formData.longitude);
       })
       .error(function(data){
         console.log('There was an error with: ' + data);
