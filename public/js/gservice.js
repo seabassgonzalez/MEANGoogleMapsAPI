@@ -1,4 +1,5 @@
-// Creates the gservice factory. This will be the primary means by which we interact with Google Maps
+// Creates the angular.module gservice []
+    // factory. This will be the primary means by which we interact with Google Maps
 
         // Initialize Variables
         // -------------------------------------------------------------
@@ -51,3 +52,10 @@
     // Set initial location as a bouncing red marker
 
 // Refresh the page upon window load. Use the initial latitude and longitude
+
+angular.module('gservice', [])
+    .factory('gservice', function($http){
+
+
+        
+    });
