@@ -47,3 +47,7 @@
     // For each marker created, add a listener that checks for clicks
 
         // When clicked, open the selected marker's message
+
+    // Set initial location as a bouncing red marker
+
+// Refresh the page upon window load. Use the initial latitude and longitude
