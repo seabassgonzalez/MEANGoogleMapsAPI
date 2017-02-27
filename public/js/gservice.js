@@ -82,6 +82,6 @@ angular.module('gservice', [])
             $http.get('/users').success(function(response){
                 locations = convertToMapPoints(response);
                 initialize(latitude, longitude);
-            });
+            }).error(function(){});
         };
     });
