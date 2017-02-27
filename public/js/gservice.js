@@ -84,4 +84,16 @@ angular.module('gservice', [])
                 initialize(latitude, longitude);
             }).error(function(){});
         };
+
+        // Private Inner Functions
+
+        // Convert users JSON into map points
+            // Clear locations
+            // Iterate through JSON entries
+                // Create windows for each
+                // Convert each to Google Map expected location format
+        var convertToMapPoints = function(response){
+
+        };
+
     });
