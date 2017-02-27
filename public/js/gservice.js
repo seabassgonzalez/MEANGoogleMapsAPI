@@ -92,15 +92,16 @@ angular.module('gservice', [])
             // Iterate through JSON entries
                 // Create windows for each
                 // Convert each to Google Map expected location format
+
         var convertToMapPoints = function(response){
             var locations = [];
             for(var i=0, length=response.length; i < length; i++){
-                var givenUser = response[i];
+                var user = response[i];
                 var contentString =
-                    '<p><b>Name</b>: ' + givenUser.name +
-                    '<br><b>Age</b>: ' + givenUser.age +
-                    '<br><b>Gender</b>: ' + givenUser.gender +
-                    '<br><b>Favorite Location</b>: ' + givenUser.favloc +
+                    '<p><b>Name</b>: ' + user.name +
+                    '<br><b>Age</b>: ' + user.age +
+                    '<br><b>Gender</b>: ' + user.gender +
+                    '<br><b>Favorite Location</b>: ' + user.favloc +
                     '</p>';
 
             }
