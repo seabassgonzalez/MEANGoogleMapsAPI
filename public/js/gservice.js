@@ -105,7 +105,15 @@ angular.module('gservice', [])
                     '</p>';
 
                 locations.push({
-
+                    latlon: new google.maps.LatLng(user.location[1], user.location[0]),
+                    message: new google.maps.InfoWindow({
+                        content: contentString,
+                        maxWidth: 320
+                    }),
+                    username: user.username,
+                    gender: user.gender,
+                    age: user.age,
+                    favlang: user.favlang
                 });
             }
             return locations;
