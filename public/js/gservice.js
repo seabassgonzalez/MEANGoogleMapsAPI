@@ -104,7 +104,11 @@ angular.module('gservice', [])
                     '<br><b>Favorite Location</b>: ' + user.favloc +
                     '</p>';
 
+                locations.push({
+
+                });
             }
+            return locations;
         };
 
     });
