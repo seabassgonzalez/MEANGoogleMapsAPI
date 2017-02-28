@@ -119,4 +119,12 @@ angular.module('gservice', [])
             return locations;
         };
 
+        // Initialize the map passing in latitude and longitude arguments
+            // Establish myLatLng variable to hold selected latitude and longitude
+            // Check if map has been created already
+                // if not instantiate map variable as new instance of google.maps.Map
+        var initialize = function(latitude, longitude){
+
+        };
+
     });
