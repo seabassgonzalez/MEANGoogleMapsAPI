@@ -122,7 +122,10 @@ angular.module('gservice', [])
         // Initialize the map passing in latitude and longitude arguments
             // Establish myLatLng variable to hold selected latitude and longitude
             // Check if map has been created already
-                // if not instantiate map variable as new instance of google.maps.Map
+                // if not instantiate map variable as new instance of google.maps.Map on page
+            // Iterate through each location and place a corresponding marker on the map
+                // k
+            // Set initial location
         var initialize = function(latitude, longitude){
 
         };
