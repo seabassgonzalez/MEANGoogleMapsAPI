@@ -152,12 +152,19 @@ angular.module('gservice', [])
                     position: n.latlon,
                     map: map,
                     title: "Initial Map",
-                    icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+                    icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
                 });
                 google.maps.event.addListener(marker, 'click', function(e){
                     currentSelectedMarker = n;
                     n.message.open(map, marker);
                 });
+            });
+            var initialLocation = new google.maps.LatLng(latitude, longitude);
+            var marker = new google.maps.Marker({
+                position: ,
+                animation: ,
+                map: ,
+                icon: 
             });
         };
 
