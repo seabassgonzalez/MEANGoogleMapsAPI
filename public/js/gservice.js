@@ -124,8 +124,21 @@ angular.module('gservice', [])
             // Check if map has been created already
                 // if not instantiate map variable as new instance of google.maps.Map on page
             // Iterate through each location and place a corresponding marker on the map
-                // k
-            // Set initial location
+                // instantiate marker variable to hold new instance of google.maps.Marker
+                    // position property
+                    // map prop
+                    // title prop
+                    // icon prop
+                // add click listener using google.maps.event.addListener
+                    // set current selected marker to n
+                    // open n message with map and marker n.message.open(map,marker)
+            // Set initial location new variable as new instance of google.maps.LatLng
+            // Set marker variable as new instance of google.maps.Marker
+                // position property
+                    // map prop
+                    // title prop
+                    // icon prop
+            // set lastMarker to marker
         var initialize = function(latitude, longitude){
 
         };
