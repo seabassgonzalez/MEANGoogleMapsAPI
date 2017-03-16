@@ -147,6 +147,15 @@ angular.module('gservice', [])
                     center: myLatLng
                 });
             }
+            locations.forEach(function(n, i){
+                var marker = new google.maps.Marker({
+                    position: ,
+                    map: ,
+                    title: ,
+                    icon: ,
+                });
+                
+            });
         };
 
     });
