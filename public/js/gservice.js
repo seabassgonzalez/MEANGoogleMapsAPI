@@ -154,7 +154,10 @@ angular.module('gservice', [])
                     title: "Initial Map",
                     icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
                 });
-
+                google.maps.event.addListener(marker, 'click', function(e){
+                    currentSelectedMarker = n;
+                    n.message.open(map, marker);
+                });
             });
         };
 
