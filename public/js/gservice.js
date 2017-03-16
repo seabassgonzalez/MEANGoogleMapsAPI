@@ -149,12 +149,12 @@ angular.module('gservice', [])
             }
             locations.forEach(function(n, i){
                 var marker = new google.maps.Marker({
-                    position: ,
-                    map: ,
-                    title: ,
-                    icon: ,
+                    position: n.latlon,
+                    map: map,
+                    title: "Initial Map",
+                    icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
                 });
-                
+
             });
         };
 
