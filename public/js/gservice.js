@@ -140,7 +140,13 @@ angular.module('gservice', [])
                     // icon prop
             // set lastMarker to marker
         var initialize = function(latitude, longitude){
-
+            var myLatLng = {lat: selectedLat, lng: selectedLong};
+            if(!map){
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 3, 
+                    center: myLatLng
+                });
+            }
         };
 
     });
