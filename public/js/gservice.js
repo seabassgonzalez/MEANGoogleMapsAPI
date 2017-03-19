@@ -168,5 +168,8 @@ angular.module('gservice', [])
             });
             lastMarker = marker;
         };
+        google.maps.event.addDomListener(window, 'load',
+            googleMapService.refresh(selectedLat, selectedLong));
 
+        return googleMapService;
     });
