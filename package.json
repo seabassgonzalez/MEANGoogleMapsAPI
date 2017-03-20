@@ -1,5 +1,7 @@
 {
   "name": "MEANGoogleMapsAPI",
+  "version": "1.0.0",
+  "description": "Initial app implementing Google Maps in MEAN stack",
   "main": "server.js",
   "dependecies": {
     "express": "~4.7.2",
