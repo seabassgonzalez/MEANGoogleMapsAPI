@@ -66,6 +66,9 @@ angular.module('gservice', [])
         var locations = [];
         var selectedLat = 37.7952;
         var selectedLong = 122.4028;
+        // Handle googleMapService clicks and location settings 
+        googleMapService.clickLat  = 0;
+        googleMapService.clickLong = 0;
 
         // Functions
 
