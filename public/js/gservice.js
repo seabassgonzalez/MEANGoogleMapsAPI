@@ -182,10 +182,10 @@ export default angular.module('gservice', [])
             // Move bouncing red marker to new click location
             google.maps.event.addListener(map, 'click', function(e){
                 var marker = new google.maps.Marker({
-                    position: ,
-                    animation: ,
-                    map: ,
-                    icon: ,
+                    position: e.latLng,
+                    animation: google.maps.Animation.BOUNCE,
+                    map: map,
+                    icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png',
                 });
                 // Delete old bouncing red marker when new location clicked
                 if(lastMarker){
