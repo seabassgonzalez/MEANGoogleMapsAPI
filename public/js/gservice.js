@@ -58,7 +58,7 @@
 
 // Refresh the page upon window load. Use the initial latitude and longitude
 
-angular.module('gservice', [])
+export default angular.module('gservice', [])
     .factory('gservice', function($http){
 
         // Initialize Variables
@@ -141,6 +141,13 @@ angular.module('gservice', [])
                     // map prop
                     // title prop
                     // icon prop
+            // map.panTo function for moving to selected location
+            // Clicking on the map moves the bouncing red marker with click listener google.maps.event.addListener
+                // marker variable set to new instance of google.maps.Marker
+                    // position animation map and icon properties
+                // delete old marker when new spot selected, check to see if there's already a last marker 
+                    // setMap last marker to null
+                // create new bouncing red marker and move to it
             // set lastMarker to marker
         var initialize = function(latitude, longitude){
             var myLatLng = {lat: selectedLat, lng: selectedLong};
@@ -169,6 +176,7 @@ angular.module('gservice', [])
                 map: map,
                 icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
             });
+
             lastMarker = marker;
         };
         google.maps.event.addDomListener(window, 'load',
