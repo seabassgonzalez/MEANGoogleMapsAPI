@@ -149,6 +149,9 @@ export default angular.module('gservice', [])
                 // delete old marker when new spot selected, check to see if there's already a last marker 
                     // setMap last marker to null
                 // create new bouncing red marker and move to it
+                // Update broadcasted variable lat
+                // Update broadcasted variable long
+                // Update $rootScope $broadcast to clicked, $rootScope.$broadcast("clicked")
             // set lastMarker to marker
         var initialize = function(latitude, longitude){
             var myLatLng = {lat: selectedLat, lng: selectedLong};
@@ -194,6 +197,8 @@ export default angular.module('gservice', [])
                 // Create and move to new bouncing red marker
                 lastMarker = marker;
                 map.panTo(marker.position);
+                // Update broadcasted variable to change panels lat and long values, googleMapService.clickLat to new marker position and same for Long
+                // $rootScope.$broadcast clicked
             });
 
             lastMarker = marker;
