@@ -1,5 +1,6 @@
 // Creates the angular.module gservice []
-    // factory. This will be the primary means by which we interact with Google Maps
+    // factory. This will be the primary means by which we interact with Google Maps - include $rootScope in dependencies
+        // because we'll be broadcasting the result of clicks back to our original Angular form
 
 
         // Initialize Variables
@@ -59,7 +60,7 @@
 // Refresh the page upon window load. Use the initial latitude and longitude
 
 export default angular.module('gservice', [])
-    .factory('gservice', function($http){
+    .factory('gservice', function($rootScope, $http){
 
         // Initialize Variables
         var googleMapService = {};
