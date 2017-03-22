@@ -176,6 +176,24 @@ export default angular.module('gservice', [])
                 map: map,
                 icon: 'http://maps.google.com/mapfiles/ms/icons/red-dot.png'
             });
+            // Function for moving to a selected location
+            map.panTo(new google.maps.LatLng(latitude, longitude));
+            // Move bouncing red marker to new click location
+            google.maps.event.addListener(map, 'click', function(e){
+                var marker = new google.maps.Marker({
+                    position: ,
+                    animation: ,
+                    map: ,
+                    icon: ,
+                });
+                // Delete old bouncing red marker when new location clicked
+                if(lastMarker){
+                    lastMarker.setMap(null);
+                }
+                // Create and move to new bouncing red marker
+                lastMarker = marker;
+                map.panTo(marker.position);
+            });
 
             lastMarker = marker;
         };
