@@ -199,8 +199,10 @@ export default angular.module('gservice', [])
                 map.panTo(marker.position);
                 // Update broadcasted variable to change panels lat and long values, googleMapService.clickLat to new marker position and same for Long
                 // $rootScope.$broadcast clicked
+                googleMapService.clickLat = marker.getPosition().lat();
+                googleMapService.clickLong = marker.getPosition().long();
+                $rootScope.$broadcast("clicked");
             });
-
             lastMarker = marker;
         };
         google.maps.event.addDomListener(window, 'load',
