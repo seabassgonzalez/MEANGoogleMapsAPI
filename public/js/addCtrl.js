@@ -8,6 +8,9 @@
 
   // Functions
 
+  // Get coordinates based on click
+    // Run the gservice functions associated with coordinates when click detected
+
   // $scope.createUser method 
     // Create new user from form fields taking form text field values
       // username
@@ -36,6 +39,17 @@ addCtrl.controller('addCtrl', function($scope, $http, $rootScope, geolocation, g
 
   $scope.formData.latitude = 37.7952;
   $scope.formData.longitude = 122.4028;
+
+  // Get coordinates based on mouse click. When a click event is detected....
+  $rootScope.$on("clicked", function(){
+
+    // Run the gservice functions associated with identifying coordinates
+    $scope.$apply(function(){
+        $scope.formData.latitude = parseFloat(gservice.clickLat).toFixed(3);
+        $scope.formData.longitude = parseFloat(gservice.clickLong).toFixed(3);
+        $scope.formData.htmlverified = "Nope (Thanks for spamming my map...)";
+    });
+  });
 
   $scope.createUser = function(){
 
